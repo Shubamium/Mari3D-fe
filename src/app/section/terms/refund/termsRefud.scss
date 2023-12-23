@@ -1,0 +1,48 @@
+#container_refund{
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	margin: 100px 0;
+	.refund-title{
+		width: 300px;
+		padding: 1.5em;
+		background: var(--grad1);
+
+		outline: 1px solid var(--green);
+		outline-offset: -5px;
+		min-height: 350px;
+		h2{
+			color: white;
+			display: flex;
+			// align-items: baseline;
+			svg{
+				vertical-align: center;
+				fill: white;
+				width: 30px;
+				height: 30px;
+			}
+		}
+		p{
+		color: white;
+			margin: 1em 0;
+			font-size: .8rem;
+			*{
+				color: inherit;
+			}
+		}
+	}
+
+	.list{
+		background: var(--grad1);
+		max-width: 500px;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		padding: 1em;
+		.refund{
+			background:var(--yellow);
+			padding: .85em;
+			font-size: 1rem;
+		}
+	}
+}

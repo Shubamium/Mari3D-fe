@@ -1,0 +1,247 @@
+#container_footer{
+	// min-height: 500px;
+	margin-top: 2em;
+	
+	width: 100%;
+	background: var(--grad1);
+
+	.confine{
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		max-width: 1200px;
+		margin: auto;
+		.left{
+			display: grid;
+			grid-template-columns: 90px 1fr;
+			gap: 1em;
+			padding-top: 2em;
+			.pfp img{
+				max-width: 100%;
+			}
+
+			.text{
+				padding-bottom: 100px;
+				.head{
+					.decor_skew{
+						display: flex;
+						gap: .25em;
+						.box{
+							height: 30px;
+							width: 35px;
+							transform: skew(-30deg);
+							background-color: var(--green);
+
+							&.a{
+								background: white;
+							}
+							&.b{
+								background: var(--yellow);
+							}
+						}
+					}
+
+					h2{
+						font-size: 2rem;
+						color: white;
+						line-height: 80%;
+					}
+					.email{
+						color: white;
+						opacity: .8;
+					}
+					.copyright{
+						color: var(--green);
+						opacity: .5;
+						margin: .25em 0;
+					}
+				}
+				article{
+					margin: .5em 0;
+					margin-left: -10px;
+					hr{
+						color: var(--green);
+						height: 2px;
+						border-radius: 2em;
+						margin: 0.5em .25em;
+						margin-left: 0;
+						max-width: 80%;
+					}
+				}
+
+				.navigation{
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					max-width: 80%;
+					gap:0.5em 1em;
+					a{
+						color: white;
+						position: relative;
+						&::before{
+							content: '';
+							width: 100%;
+							position: absolute;
+							height: 2px;
+							bottom: -5%;
+							width: 0%;
+							left: 0%;
+							background: white;
+							transition: all 150ms ease;
+						}
+						&:hover{
+							&::before{
+								width: 100%;
+							}
+						}
+					}
+				}
+
+					
+				.contact{
+					width: 100%;
+					// height: 40px;
+					// background-color: green;
+					display: flex;
+					align-items: center;
+					gap: 1em;
+					background: rgb(235, 235, 235);
+					width: min-content;
+					padding: .15em 1em;
+					justify-content: flex-end;
+					
+					position: relative;
+
+					margin: 1em 0;
+					&::before{
+						content: '';
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0%;
+						left: 0%;
+						z-index: -2;
+						border-radius: 1em;
+						scale: 0;
+						transition: all 300ms ease;
+						border: 1px solid rgb(121, 121, 121);
+					}
+					border-radius: 1.5em;
+					a{
+						position: relative;
+						top: 2px;
+						color: white;
+						opacity: .5;
+						transition: all 150ms ease;
+
+						svg{
+							width: 20px;
+							height: 20px;
+						}
+						&:hover{
+							scale: 1.2;
+							opacity: 1;
+							svg{
+								fill:var(--dGreen);
+								width: 20px;
+								height: 20px;
+							}
+						}
+					}
+
+					&:hover::before{
+						scale: 1.2;
+					}
+				}
+			}
+		}
+
+		.right{
+			display: grid;
+			grid-template-columns: 40px 1fr;
+			padding-top: 20px;
+			gap: .5em;
+			.decor_boxes{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 5px;
+				.box{
+					width: 30px;
+					height: 30px;
+					border: 2px solid var(--green);
+					&.a{
+						border-color: white;
+					}
+
+					&.b{
+						border-color: var(--yellow);
+					}
+				}
+			}
+			.credits{
+				background: var(--green);
+				border-radius: 0 25% 0 0;
+
+				padding: 1em;
+				outline: 1px solid rgba(255, 255, 255, 0.425);
+				outline-offset: 4px;
+				.credit-list{
+					display: grid;
+					grid-template-columns: 30% 30% 33%;
+					gap: 1em;
+					margin: .25em 0;
+					.credit-item{
+							
+					
+						h3{
+							font-size: 1rem;
+						}
+						a{
+							transition: all 150ms ease;
+							display: block;
+							font-size: .8rem;
+							opacity: .7;
+							&:hover{
+								opacity: 1;
+								transform: translateX(2px);
+								color: white;
+							}
+						}
+					}
+				}
+				.head{
+					display: flex;
+					align-items: center;
+					gap: .15em;
+					.arrows{
+						margin: 0 1em;
+						// flex: 1;
+						display: flex;
+						gap: .25em;
+						.decor_arrow{
+							height: 25px;
+							width: 25px;
+							clip-path: polygon(100% 50%, 0 0, 0 100%);
+							background: var(--grey);
+						}
+					}
+					h2{
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.decor_footer_frame{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: absolute;
+	z-index: -20;
+	max-height: 50px;
+
+	.side{
+		max-width: 30%;
+	}
+}

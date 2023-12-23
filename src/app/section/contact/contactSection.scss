@@ -1,0 +1,176 @@
+#contact-form{
+
+
+	.credentials{
+		background: var(--grey);
+		margin: 50px 0;
+		.confine{
+			max-width: 1200px;
+			margin: 0 auto;
+
+			display: grid;
+			grid-template-columns: 1fr 5fr;
+			gap: 70px;
+			figure img{
+				scale: 1.4;
+				max-width: 100%;
+			}
+
+			article{
+				padding: 1em 0;
+				h1{
+					color: white;
+					// padding: 1em 0;
+					font-size: 4rem;
+					line-height: 80%;
+					text-indent: -3px;
+				}
+				.tagline{
+					color: var(--yellow);
+					font-size: 1.2rem;
+				}
+				.tag-email{
+					color: #91a182;
+
+					.email{
+						color: #c5e2ba;
+					}
+					.tag{
+						color: #91a182;
+					}
+				}
+			}
+
+
+			.contact{
+				display: flex;
+				gap: .55em;
+				margin: 1em 0;
+				a{
+					box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.247);
+					background: var(--green);
+					display: flex;
+					align-items: center;
+					padding: .5em;
+
+					transition: all 100ms ease;
+					&:hover{
+						outline: 2px solid white;
+						outline-offset: 2px;
+						scale: 1.02;
+						svg{
+							display: block;
+							transform: rotateY(1turn);
+							perspective: 200px;
+						}
+					}
+					svg{
+						width: 30px;
+						height: 30px;
+						transition: all 350ms ease;
+						fill: var(--grey);
+					}
+				}
+			}
+		}
+	}
+
+	.form-confine{
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		margin: 0 auto;
+		max-width: 1200px;
+		gap: 1em;
+
+		.form{
+			.form-head{
+				display: flex;
+				gap: 1em;
+				align-items: center;
+				background: var(--yellow);
+				padding: .25em 1em;
+				margin: 0 .55em;
+				clip-path: polygon(0 0, 94% 0, 100% 100%, 0% 100%);
+				width: max-content;
+
+				.arrows{
+					display: flex;
+					gap: .25em;
+					align-items: center;
+					margin-right: 20px;
+					.arrow{
+						width: 20px;
+						height: 20px;
+						background: var(--grey);
+						clip-path: polygon(100% 50%, 0 0, 0 100%);
+
+					}
+				}
+			}
+
+			.form-body{
+				background: url('/background/tech_vague.png');
+				background-size: 800px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.5em;
+				padding: 1em;
+
+				outline: 3px solid var(--yellow);
+				.field{
+
+					&.submit-field{
+						align-items: flex-end;
+						min-height: 50px;
+						justify-content: flex-end;
+					}
+					display: flex;
+					flex-direction: column;
+					&.full{
+						grid-column: span 2;
+					}
+					label{
+						color: var(--yellow);
+						font-size: 1.4rem;
+					}
+					input,textarea{
+						border: none;
+						border-radius: .5em;
+						font-family: var(--fontMain);
+						padding: .5em;
+						&:focus{
+							outline: 2px solid var(--green);
+							outline-offset: 2px;
+						}
+						width: 100%;	
+						resize: none;
+						&::placeholder{
+							opacity: .25;
+						}
+					}
+					textarea{
+						min-height: 250px;
+					}
+				}
+				box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.301);
+			}
+		}
+
+		figure{
+			padding: 1em;
+			outline: 3px solid var(--green);
+			outline-offset: -40px;
+			video{
+				clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+				outline: 1px solid black;
+				outline-offset: -40px;
+
+		
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.301);
+			}
+		}
+	}
+}

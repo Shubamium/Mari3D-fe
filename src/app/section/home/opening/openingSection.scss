@@ -1,0 +1,33 @@
+#container_opening{
+
+	text-align: center;
+	article{
+		max-width: 800px;
+		margin: 0 auto;
+
+		h2{
+			font-size: 4rem;
+		}
+	}
+
+	.opening{
+		padding: 2em 0;
+		background: url('/background/tech.webp'),var(--grad1);
+		background-blend-mode: multiply;
+		mix-blend-mode: darken;
+		opacity: .8;
+		margin: 1em 0;
+
+		h3{
+			font-size: 7rem;
+			color:var(--green);
+		}
+	}
+
+	.action{
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 50px;
+	}
+}

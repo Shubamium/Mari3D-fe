@@ -1,0 +1,39 @@
+.container_portfolio-head{
+	background: #F2F2F2;
+	max-height: 90px;
+	margin-bottom: 150px;
+	.confine{
+		margin: 1em auto;
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding-top: 1em;
+
+		article{
+			.head{
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				h2{
+					font-size: 3.5rem;
+					font-weight: normal;
+				}
+				img{
+					max-height: 80%;
+					max-width: 120px;
+				}
+			}
+			p{
+				margin: 1em 0;
+				opacity: .8;
+			}
+		}
+		figure{
+			display: flex;
+			justify-content: flex-end;
+			img{
+				height: 200px;
+			}
+		}
+	}	
+}

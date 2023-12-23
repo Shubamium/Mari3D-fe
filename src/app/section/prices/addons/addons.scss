@@ -1,0 +1,68 @@
+#container_addons{
+	
+	margin: 100px 0;
+	.addons-list{
+		padding: 50px;
+		background-color: #F2F2F2;
+
+		.confine{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-content: center;
+			gap: 1em;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+		.row{
+			display: flex;flex-direction: column;
+			justify-content: center;
+			gap: 1em;
+		}
+	}
+
+	.others{
+		margin: 100px 0;
+	}
+	.addon{
+		&.big{
+			padding: 1em;
+		}
+		background: var(--grad1);
+		display: flex;
+		align-items: center;
+		padding: .45em;
+		padding-left: 1em;
+		justify-content: space-between;
+		gap: 1em;
+		h2{
+			color: white;
+			font-size: 1.05rem;
+		}
+		.detail{
+			p{
+				opacity: .8;
+				color: white;
+				max-width: 100%;
+				font-size: .8rem;
+			}
+		}
+		.price{
+			display: flex;
+			font-size: 1.5rem;
+			font-weight: bold;
+			letter-spacing: 1px;
+			padding: 0em 1em;
+			align-items: center;
+			min-width: 190px;
+			justify-content: center;
+			background: var(--green);
+			white-space: nowrap;
+
+			&.minus{
+				p{
+					color: rgba(255, 75, 75, 0.623);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+#container_revision{
+
+	.heading{
+		background: url('/background/tech.webp'),rgba(83, 83, 83, 0.699);
+		background-blend-mode: multiply;
+		background-size: 400px;
+		.confine{
+			max-width: 1200px;
+			margin: 0 auto;
+			
+			.part{
+				padding: .25em;
+				display: flex;
+				align-items: center;
+				background: var(--green);
+				width: min-content;
+				padding: 0.5em 1em;
+				gap: 1em;
+			}
+			svg{
+				// fill: white;
+				width: 40px;
+				height: 40px;
+				filter:  brightness(500%);
+				path{
+					// fill: white;
+				}
+			}
+			h2{
+				font-size: 2rem;
+				color: white;
+				svg{
+					
+					color: white;
+				}
+			}
+		}
+	}
+	.list{
+		max-width: 950px;
+		margin: 20px auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+		h3{
+			font-weight: normal;
+		}
+	}
+}

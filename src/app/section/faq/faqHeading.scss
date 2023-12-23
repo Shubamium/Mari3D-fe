@@ -1,0 +1,40 @@
+#container_faq-head{
+	background: #6C6E75;
+	margin: 50px 0;
+	.confine{
+		max-width: min(900px,80%);
+		margin:  0 auto;
+		background: var(--grad1);
+
+		scale: 1.3;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: .2em 5em;
+		border-radius: 10em;
+		align-items: center;
+		article{
+			h1{
+				color: white;
+			}
+
+			p{
+				color: white;
+				opacity: 0.5;
+				font-weight: lighter;
+				font-size: .9rem;
+				max-width: 90%;
+			}
+		}
+		figure{
+			img{
+				max-width: 100%;
+				border: 2px solid black;
+
+				border-radius: 1em;
+				position: relative;
+				top: 30px;
+				scale: 1.02;
+			}
+		}
+	}
+}

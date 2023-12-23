@@ -1,0 +1,75 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color: #3F414D;
+}
+
+:root{
+	--grey:#3F414D;
+	--lGrey: #8C8C8C;
+	--llGrey: #A9A9A9;
+	--green: #94DC64;
+	--dGreen: #437423;
+	--yellow: #FFDC6F;
+	--grad1:linear-gradient(180deg, #5B5B5C 0%, #262937 100%);
+}
+
+a{
+	text-decoration: none;
+}
+
+main{
+	// min-height: 410vh;
+	padding-bottom: 250px;
+}
+body{
+	background: url('/background/grid.png'),white;
+	overflow-x: hidden;
+}
+
+
+.hero_frame{
+	background: url('/background/tech.webp');
+	width: 100%;
+	height:190px;
+	background-size: 700px;
+	border-block: 5px solid var(--green);
+	position: relative;
+	// z-index: 10;
+	.top{
+		position: absolute;
+		width: 100%;
+		z-index: -20;
+		// bottom: calc(100% - 50px);
+		bottom: 80%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		.side{
+			object-fit: contain;
+			object-position: bottom;
+			max-width: 15%;
+			max-height: 90px;
+		}
+	}
+	
+
+	.bottom{
+		position: absolute;
+		width: 100%;
+		top:80%;		
+		display: flex;
+		justify-content: space-between;
+		transform: scaleY(-1);
+		z-index: -20;
+		.side{
+			// object-fit: contain;
+			// object-position: bottom;
+			max-width: 15%;
+			max-height: 90px;
+
+		}
+	}
+	
+}

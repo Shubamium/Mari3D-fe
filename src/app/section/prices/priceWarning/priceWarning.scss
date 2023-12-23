@@ -1,0 +1,58 @@
+#container_price-warning{
+	// background: red;
+	position: relative;
+	.decor{
+		position: absolute;
+		bottom: 90%;
+		z-index: -1;
+		left: 0%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		svg{
+			max-width: 30%;
+		}
+	}
+	.warning{
+		background: #FEE3E4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1em;
+		p{
+			color: #FF6969;
+			margin: 1em 0;
+			max-width: 650px;
+			text-align: center;
+			b{
+				color: inherit;
+			}
+		}
+		svg{
+			width: 80px;
+			height: 80px;
+			fill: #FF6969;
+
+		}
+		justify-content: center;
+	}
+
+	.action{
+		background:var(--grey);
+		h2{
+			color: white;
+			text-align: center;
+			font-size: 1rem;
+			margin-bottom: 1em;
+		}
+		.btn-list{
+			display: flex;
+			justify-content: center;
+			gap: 1em;
+		}
+
+		padding: 1em 0;
+	}
+}

@@ -1,0 +1,69 @@
+#terms-general{
+	background: url('/background/pattern_tech.png');
+	border-block: 5px solid rgb(218, 216, 216);
+
+	.confine{
+		display: grid;
+		grid-template-columns: 170px 1fr;
+		margin: 0 auto;
+		gap: 1em;
+		max-width: 1000px;
+		padding: 50px 0;
+		aside{
+			background:url('/background/tech_desaturated.png'),#ffffffe5;
+			background-blend-mode: multiply;
+			border-radius: 1em;
+			background-size: cover;
+			padding: .5em;
+			border: 3px solid var(--green);
+			min-height: 400px;
+			h2{
+				color: white;
+			}
+		}
+
+		.general-list{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+		
+		}
+		
+	}
+}
+
+.tos{
+	margin: 1em 0;
+	background: #2B2D36;
+	.tos-head{
+		background: var(--green);
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .55em;
+		h3{
+			font-size: 1.3rem;
+		}
+		.blocks{
+			display: flex;
+			gap: .2em;
+			.block{
+				width: 20px;
+				height: 20px;
+				border: 2px solid white;
+			}
+		}
+	}
+	.tos-body{
+		padding: 1em;
+		p{
+			color: white;
+			font-size: .8rem;
+			b,u{
+				color: inherit;
+			}
+		}
+	}
+}
