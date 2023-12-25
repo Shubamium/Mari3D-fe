@@ -10,8 +10,8 @@ export default function Footer({}: Props) {
 	return (
 		<>
 		<div className="decor_footer_frame">
-			<img src="decor/side_l.png" alt="" className='side' />
-			<img src="decor/side_r.png" alt="" className='side' />
+			<img src="/decor/side_l.png" alt="" className='side' />
+			<img src="/decor/side_r.png" alt="" className='side' />
 		</div>
 		<footer id='container_footer'>
 			<div className="confine">
@@ -19,7 +19,7 @@ export default function Footer({}: Props) {
 				{/* text */}
 				<div className="left">
 					<div className="pfp">
-						<img src="image/icon.png" alt="" />
+						<img src="/image/icon.png" alt="" />
 					</div>
 					<div className="text">
 						<div className="head">

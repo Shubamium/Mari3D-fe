@@ -19,7 +19,7 @@ export default function PaymentSection({}: Props) {
 						</h2>
 					</div>
 					<div className="body">
-						<img src="image/payment_option.png" alt="" />
+						<img src="/image/payment_option.png" alt="" />
 						<p>Payment is done via <br /><b>VGEN</b> or <b>Paypal</b></p>
 					</div>
 				</div>

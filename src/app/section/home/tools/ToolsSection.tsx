@@ -15,7 +15,7 @@ export default function ToolsSection({}: toolsProps) {
 					{/* Card Photo */}
 					<div className="card blue">
 						 <div className="card-img">
-										<img src="image/ic_photo.png" alt="" />
+										<img src="/image/ic_photo.png" alt="" />
 						 </div>
 
 						 <div className="card-text">
@@ -27,7 +27,7 @@ export default function ToolsSection({}: toolsProps) {
 					{/* Card SAI */}
 					<div className="card">
 						 <div className="card-img">
-								<img src="image/ic_sai.png" alt="" />
+								<img src="/image/ic_sai.png" alt="" />
 						 </div>
 
 						 <div className="card-text">
@@ -39,7 +39,7 @@ export default function ToolsSection({}: toolsProps) {
 					{/* Card Blender */}
 					<div className="card yellow">
 						 <div className="card-img">
-										<img src="image/ic_blend.png" alt="" />
+										<img src="/image/ic_blend.png" alt="" />
 						 </div>
 
 						 <div className="card-text">

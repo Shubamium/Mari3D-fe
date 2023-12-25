@@ -12,7 +12,7 @@ export default function PortfolioSection({}: PortfolioProps) {
 		<section id="container_portfolio">
 			<div className="content">
 				<figure>
-					<img src="image/banner.png" alt="" />
+					<img src="/image/banner.png" alt="" />
 				</figure>
 				<article>
 					<h2>Portfolio</h2>
