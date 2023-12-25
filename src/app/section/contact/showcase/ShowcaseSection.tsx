@@ -1,10 +1,44 @@
 import React from 'react'
 import './showcaseSection.scss'
+import { fetchData, urlFor } from '@/db/client'
+
+import { buildFileUrl} from '@sanity/asset-utils'
 type Props = {
 
 }
 
-export default function ShowcaseSection({}: Props) {
+type ShowcaseData = {
+  _id: string;
+  preset: string;
+  video_list: Array<{
+    title: string;
+    video: any;
+  }>;
+  youtube_list: Array<{
+    title: string;
+    video_id: string;
+  }>;
+}[]
+export default async function ShowcaseSection({}: Props) {
+
+	const query = `
+	*[_type == 'showcase' && preset == 'main'] {
+		_id,
+		preset,
+		video_list[]{
+			title,
+			"video":video.asset->url
+		},
+		youtube_list[]{
+			title,
+			video_id
+		}
+	}
+	`
+
+	const data = await fetchData<ShowcaseData>(query);
+	const showcaseData = data[0]
+	
 	return (
 		<section id='container_showcase'>
 			<div className="short">
@@ -20,27 +54,11 @@ export default function ShowcaseSection({}: Props) {
 				</div>
 
 				<div className="video-list">
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
-					<div className="video">
-						<video src="/video/hero.mp4" autoPlay controls loop></video>
-					</div>
+					{showcaseData.video_list.length > 0 && showcaseData.video_list.map((video,index)=>{
+							return <div className="video" key={'video-short'+index}>
+							<video src={video.video} autoPlay controls loop></video>
+						</div>
+					})}
 				</div>
 			</div>
 			<div className="long">
@@ -56,19 +74,14 @@ export default function ShowcaseSection({}: Props) {
 				</div> */}
 
 				<div className="video-list">
-					<div className="video youtube">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/AWocxbVD3CE?si=3xvG2YQnOGYT2VCk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen" allowFullScreen={true}></iframe>
-					</div>
-					<div className="video youtube">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/AWocxbVD3CE?si=3xvG2YQnOGYT2VCk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen" allowFullScreen={true}></iframe>
-					</div>
-					<div className="video youtube">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/AWocxbVD3CE?si=3xvG2YQnOGYT2VCk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen" allowFullScreen={true}></iframe>
-					</div>
-					<div className="video youtube">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/AWocxbVD3CE?si=3xvG2YQnOGYT2VCk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen" allowFullScreen={true}></iframe>
-					</div>
-					
+	
+					{
+						showcaseData.youtube_list.length > 0 && showcaseData.youtube_list.map((yt,index)=>{
+							return 	<div className="video youtube" key={'video-long'+index}>
+							<iframe width="560" height="315" src={`https://www.youtube.com/embed/${yt.video_id}`} title={yt.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;fullscreen" allowFullScreen={true}></iframe>
+						</div>
+						})
+					}
 				</div>
 			</div>
 		</section>
