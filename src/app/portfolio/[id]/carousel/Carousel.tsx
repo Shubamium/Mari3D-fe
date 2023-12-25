@@ -1,9 +1,16 @@
 'use client'
 import React, { useState } from 'react'
-import { FaTwitch } from 'react-icons/fa'
+import { FaInternetExplorer, FaTiktok, FaTwitch, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { socialList } from '../page'
 
 type carouselProps = {
-	images: string[]
+	images: string[],
+	id:string,
+	name:string,
+	socials:{
+		type:socialList,
+		link:string
+	}[]
 }
 
 function chunkArray<T,>(array:T[], chunkSize:number) {
@@ -13,25 +20,25 @@ function chunkArray<T,>(array:T[], chunkSize:number) {
 	}
 	return result;
 }
-export default function Carousel({images}: carouselProps) {
+export default function Carousel({images,id,name,socials}: carouselProps) {
 
 	const [activePage,setActivePage] = useState(0);
 	const divided = chunkArray(images,2)
 	const maxPage = divided.length - 1
-	const imgOne = divided[activePage][0] ?? '#'
-	const imgTwo = divided[activePage][1] ?? '#'
+	// const imgOne = divided[activePage][0] ?? '#'
+	// const imgTwo = divided[activePage][1] ?? '#'
 	return (
 		<>
 			<div className="detail">
 							<div className="text">
-								<h2>Model Name</h2>
+								<h2>{name ?? 'Model Name'}</h2>
 								<div className="subdetail">
 									<div className="contacts">
-										<a href="#" target='_blank' className='contact-item'><FaTwitch/></a>
-										<a href="#" target='_blank' className='contact-item'><FaTwitch/></a>
-										<a href="#" target='_blank' className='contact-item'><FaTwitch/></a>
+										{socials && socials.map((social)=>{
+											return <SocialDisplayer link={social.link} type={social.type} key={'social-list-'+social.type}/>
+										})}
 									</div>
-									<p className='model-id'>#ID-17-05-2024</p>
+									<p className='model-id'>{id ?? '#ID-17-05-2024'}</p>
 								</div>
 							</div>
 							<div className="carousel-ctrl">
@@ -41,13 +48,27 @@ export default function Carousel({images}: carouselProps) {
 						</div>
 						<div className="carousel">
 							<div className="carousel-img">
-								<img src={imgOne} alt="" className='img l' />
-								<img src={imgTwo} alt=""  className='img r'/>
+								<img src={divided[activePage] ? divided[activePage][0] ?? '' : ''} alt="" className='img l' />
+								<img src={divided[activePage] ? divided[activePage][1] ?? '' : ''} alt=""  className='img r'/>
 							</div>
 							<div className="page-indicator">
 								<p>Page {activePage+1}/{maxPage+1}</p>
+								<div className='decor-edge'></div>
 							</div>
 						</div>
 		</>
+	)
+}
+
+const icon = {
+	'twitch':<FaTwitch/>,
+	'twitter':<FaTwitter/>,
+	'tiktok':<FaTiktok/>,
+	'youtube':<FaYoutube/>,
+	'website':<FaInternetExplorer/>
+}
+function SocialDisplayer({type,link}:{type:socialList,link:string}) {
+	return (
+		<a href={link} target='_blank' className='contact-item'>{icon[type]}</a>
 	)
 }
