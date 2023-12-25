@@ -1,21 +1,27 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './faqList.scss'
 import { FaPlus } from 'react-icons/fa'
+import { faqData } from '@/app/faq/page'
 
-type Props = {}
+type Props = {
+	data:faqData
+}
 
-export default function FaqList({}: Props) {
+export default function FaqList({data}: Props) {
+
+	const [activeSection,setActiveSection] = useState<string>(data[0].section)
+
+	const activeSectionQuestions = data.find((section)=>section.section === activeSection)?.questions ?? []
 	return (
 		<section id='container_faq-list'>
 			<div className="confine">
 				<aside>
 					<h2 className='title'>FAQ</h2>
 					<nav>
-						<button className='faq-btn active'>Payment</button>
-						<button className='faq-btn'>Orders</button>
-						<button className='faq-btn'>Models</button>
-						<button className='faq-btn'>Others</button>
+						{data && data.map((section,index)=>{
+							return <button className={`faq-btn ${activeSection === section.section ? 'active' : ''}`} key={index+section.section} onClick={()=>{setActiveSection(section.section)}}>{section.section}</button>
+						})}
 					</nav>
 
 					<div className="decor">
@@ -29,26 +35,28 @@ export default function FaqList({}: Props) {
 					</div>
 				</aside>
 				<div className="faq-list">
-					<FaqItem/>
-					<FaqItem/>
-					<FaqItem/>
-					<FaqItem/>
-					<FaqItem/>
-					<FaqItem/>
-					<FaqItem/>
+						{activeSectionQuestions.length > 0 && activeSectionQuestions.map((question,index)=>{
+							return <FaqItem answer={question.answer} question={question.question} key={'faq-item-'+index+activeSection}/>
+						})}
 				</div>
 			</div>
 		</section>
 	)
 }
 
-function FaqItem(){
+type faqItemProps = {
+	question:string,
+	answer:string
+}
+function FaqItem(props:faqItemProps){
 
 	const [isActive, setIsActive] = useState(false)
-
+	useEffect(()=>{
+		setIsActive(false)
+	},[props])
 	return <div className={`faq ${isActive ? 'active' : ''}`} onClick={()=>{setIsActive(isActive => !isActive)}}>
 			<div className="faq-head">
-				<h2 className='questions'>Do you create characters with different body types, skin colors, hair textures etc?</h2>
+				<h2 className='questions'>{props.question}</h2>
 				<FaPlus/>
 			</div>
 			<div className="faq-body">
@@ -60,7 +68,7 @@ function FaqItem(){
 						<div className="arrow"></div>
 					</div>
 				</div>
-				<p>Yes of course! I am open to creating a 3D representative of all bodies!</p>
+				<p>{props.answer}</p>
 			</div>
 		</div>
 }
