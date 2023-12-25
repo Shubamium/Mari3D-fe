@@ -30,7 +30,7 @@ export default function ContactSection({}: Props) {
 			</div>
 
 			<div className="form-confine">
-				<form action="/" className='form'>
+				<form action="https://formspree.io/f/mpzvaezo" method='POST' className='form'>
 					<div className="form-head">
 							<h2>Contact Me</h2>
 							<div className="arrows">
@@ -53,7 +53,9 @@ export default function ContactSection({}: Props) {
 							<textarea name="message" id="message"  required className='textarea' placeholder='Write your message here. . .'></textarea>
 						</div>
 						<div className="field submit-field full">
-							<Button>Send <FaPaperPlane/></Button>
+							<button type='submit' className='btn button-submit'>
+								Send <FaPaperPlane/>
+							</button>
 						</div>
 					</div>
 				</form>

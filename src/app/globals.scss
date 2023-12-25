@@ -73,3 +73,57 @@ body{
 	}
 	
 }
+
+.btn{
+	font-size: 1rem;	
+	background: var(--green);
+	color: var(--dGreen);
+	svg{
+		fill: var(--dGreen);
+	}
+	font-weight: bold;
+	border: none;
+	padding: .5em 1.5em;
+	font-family: var(--fontMain);
+	transition: all 100ms ease;
+	cursor: pointer;
+	perspective: 2500px;
+	position: relative;
+	transform-origin: bottom;
+	transform-style: preserve-3d;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .25em;
+	border-bottom: 5px solid var(--dGreen);
+	
+	&:hover{
+		scale: 1.025;
+	}
+	&:active{
+		// scale: .925;
+		border-bottom: 0px solid var(--dGreen);
+	}
+
+	&.normal{
+		clip-path: polygon(0% 0%, 95% 0, 100% 25%, 100% 100%, 0% 100%);
+	}
+	&.outlined{
+		background: none;
+		outline: 2px solid var(--green);
+		outline-offset: -2px;
+		color: var(--green);
+		svg{
+			fill: var(--green) ;
+		}
+		border-bottom: 5px solid var(--green);
+
+		&:active{
+			border-bottom: 0px solid var(--green);
+
+		}
+	}
+
+}
+
