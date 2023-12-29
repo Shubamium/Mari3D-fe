@@ -12,19 +12,71 @@
 		.panel{
 			background: var(--grad1);
 			outline: 2px solid var(--green);
-			padding: 2em;
-			min-height: 300px;
-			max-width: 500px;
+			outline-offset:-10px;
+			padding: 3em;
+			min-height: 400px;
+			max-width: 400px;
 			h2{
 				color: white;
-				font-size: 2rem;
+				font-size: 2.5rem;
 			}
 			p{
 				color: white;
 				opacity: .8;
 				font-weight: 200;
 			}
-			outline-offset:-5px;
+			.boxes{
+				right: 102%;
+				top: 2%;
+				display: flex;
+				flex-direction: column;
+				gap: .5em;
+				.box{
+					width: 20px;
+					height: 20px;
+					border: 2px solid var(--lGrey);
+				}
+				position: absolute;
+			}
+
+			.decor_side{
+				position: absolute;
+				left: 0%;
+				top: 10%;
+			}
+			position: relative;
+
+			&::before{
+				content: '';
+				position: absolute;
+				width: 40%;
+				height: 22px;
+				right: 10%;
+				top: -1%;
+				clip-path: polygon(0 0, 100% 0, 84% 100%, 20% 100%);
+				background: #2B2D36;
+				transition: all 250ms ease;
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				height: 40%;
+				width: 22px;
+				bottom: 10%;
+				left: -1%;
+				transition: all 250ms ease;
+				clip-path: polygon(0 0, 100% 9%, 100% 89%, 0 100%);
+				background: #94DC64;
+			}
+
+			&:hover{
+				&::before{
+					top: 0.8%;
+				}
+				&::after{
+					left:  0.8%;
+				}
+			}
 		}
 	}
 

@@ -2,6 +2,7 @@
 import React from 'react'
 import './portfolioList.scss'
 import { useRouter } from 'next/navigation'
+import { FaArrowRight } from 'react-icons/fa'
 type Props = {
 	portfolios:{
 		image:string,
@@ -32,11 +33,14 @@ function PortfolioDisplayer({name,image,slug}:portfolioDisplayerProps){
 		route.push(`/portfolio/${slug}`)
 	}
 	return (
-		<div className='portfolio-item' onClick={changeRoute}>
+		<div className='portfolio-item ' onClick={changeRoute}>
 			<img src={image ?? "/image/placeholder_portfolio.png"} alt="" className='main-img' />
 			<div className="top"></div>
 			<div className="detail">
-				<h2>{name ?? 'Model Name'}</h2>
+				<div className="title">
+					<h2>{name ?? 'Model Name'}</h2>
+					<p>View <FaArrowRight/></p>
+				</div>
 				<hr />
 			</div>
 		</div>

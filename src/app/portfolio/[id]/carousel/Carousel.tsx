@@ -8,8 +8,8 @@ type carouselProps = {
 	id:string,
 	name:string,
 	socials:{
-		type:socialList,
-		link:string
+		Type:socialList,
+		Link:string
 	}[]
 }
 
@@ -35,7 +35,7 @@ export default function Carousel({images,id,name,socials}: carouselProps) {
 								<div className="subdetail">
 									<div className="contacts">
 										{socials && socials.map((social)=>{
-											return <SocialDisplayer link={social.link} type={social.type} key={'social-list-'+social.type}/>
+											return <SocialDisplayer link={social.Link} type={social.Type} key={'social-list-'+social.Type}/>
 										})}
 									</div>
 									<p className='model-id'>{id ?? '#ID-17-05-2024'}</p>

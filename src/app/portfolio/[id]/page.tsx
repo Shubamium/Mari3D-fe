@@ -22,8 +22,8 @@ type portfolio = {
 	slug:string
 	model_id:string,
 	socials:{
-		type:socialList,
-		link:string
+		Type:socialList,
+		Link:string
 	}[]
 	main:any
 	image_list: any[]
@@ -51,6 +51,7 @@ export default async function PortfolioPreview({
 		return
 	}
 	const modelData = data[0]
+	console.log(modelData.socials)
 	return (
 		<main id='container_portfolio_preview'>
 
