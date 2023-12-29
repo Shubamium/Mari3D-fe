@@ -13,7 +13,7 @@ export default function HeroSection({}: Props) {
 						<div className="title-container">
 							<div className="title-left">
 								<h1 className='title'>MARI 3D</h1>
-								<div className="bottom">
+								<div className="bottom"> 
 									<p className='tagline'>3D Artist</p>
 									<div className="contact">
 										<a href="https://twitter.com/_Mari_Art" target='_blank'><FaTwitter/></a>
@@ -35,6 +35,10 @@ Check out my work, and maybe i'll see your application soon? `}
 						</p>
 						<div className="cta">
 							<Button to='https://forms.gle/NLMiugF9ux725Ji38' newTab>Apply Here</Button>
+							<svg width="274" height="96" viewBox="0 0 274 96" fill="none" className='btn-decor' xmlns="http://www.w3.org/2000/svg">
+									<path d="M127 13H60L48 1H2L28 27H10L28 45V84" stroke="black"/>
+									<path d="M263 37L273 46.3548V85.6452L263 95H238L228 85.6452H184" stroke="black"/>
+							</svg>
 							<img src="/decor/arrow_theme.png" alt="" />
 						</div>
 					</div>

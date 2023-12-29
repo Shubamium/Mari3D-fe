@@ -33,7 +33,7 @@
 				// background-repeat: no-repeat;
 				// background-size: contain;
 				z-index: -100;
-				animation: graph 70s infinite linear,
+				animation: graph 120s infinite ease-in-out,
 									 expand 2s infinite alternate-reverse;
 				opacity: .8;
 			}
@@ -141,9 +141,43 @@
 			img{
 				max-width: 120px;
 			}
+			position: relative;
+			.btn-decor{
+				fill: none;
+				top: 0%;
+				left: -70px;
+				position: absolute;
+				height: 100%;
+				scale: 1.4;
+
+				animation: line 5200ms infinite linear;
+				stroke-dasharray: 500;
+				opacity: 0;
+				pointer-events: none;
+				user-select: none;
+				opacity: 0.3;
+				
+				transition: opacity 250ms ease;
+			}
+			&:hover{
+				.btn-decor{
+					opacity: 1;
+				}
+			}
+			@keyframes line {
+				0%{
+					stroke-dashoffset: 0;
+				}
+				100%{
+					stroke-dashoffset: 1200;
+				}
+			}
 
 			.btn{
 				font-size: 1.2rem;
+				position: relative;
+				overflow: hidden;
+		
 			}
 		}
 	}
