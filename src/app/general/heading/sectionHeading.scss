@@ -1,8 +1,16 @@
 .section_heading{
 
+	filter: drop-shadow(2px 2px 0px rgba(30, 23, 74, 0.378));
 	width: 100%;
+
+	&:hover{
+		.head{
+			gap: 1.5em;
+		}
+	}
 	.head{
 		display: flex;
+		transition: all 250ms ease;
 		align-items: center;
 		justify-content: center;
 		gap: 1em;

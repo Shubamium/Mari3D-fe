@@ -22,15 +22,34 @@
 
 			--accent: var(--green);
 
-			outline: 2px solid var(--accent);
+			outline: 3px solid var(--accent);
 			outline-offset: -10px;
 			gap: 3em;
+			position: relative;
+
+			&::before{
+				content: '';
+				position: absolute;
+				width: 50%;
+				height: 15px;
+				top: 0%;
+				right: 20%;
+				background-color: var(--accent);
+				clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+			}
+			.decor-left{
+				top: 5%;
+				left: -2%;
+				position: absolute;
+			}
 			.card-img{
 				transition: all 550ms ease;
 				background-color: var(--accent);
 				border-radius: 50%;
 				aspect-ratio: 1/1;
 				max-width: 150px;
+				outline: 3px solid var(--accent);
+				outline-offset: 5px;
 				img{
 					object-fit: contain;
 					width: 100%;
@@ -48,6 +67,7 @@
 					opacity: .8;
 				}
 			}
+
 			transition: all 100ms ease;
 			&:hover{
 				scale: 1.02;

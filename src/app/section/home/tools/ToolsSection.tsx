@@ -13,7 +13,13 @@ export default function ToolsSection({}: toolsProps) {
 				<div className="content">
 
 					{/* Card Photo */}
-					<div className="card blue">
+					<div className="card blue shadow-flat">
+						<svg width="25" height="160" viewBox="0 0 25 160" className='decor-left' fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.796875 33.7354L20 33.7354L24.4934 9.49335L0.796874 0.5L0.796875 33.7354Z" fill="#FFE16D"/>
+							<path d="M0.796815 160L24.7968 140.997L24.7968 74.4875L0.796383 74.4875L0.796815 160Z" fill="#72AAFF"/>
+							<path d="M1 67.782L24.6965 67.782L19.5 39.9999L0.999999 39.9999L1 67.782Z" fill="#94DC64"/>
+						</svg>
+
 						 <div className="card-img">
 										<img src="/image/ic_photo.png" alt="" />
 						 </div>
@@ -25,7 +31,14 @@ export default function ToolsSection({}: toolsProps) {
 					</div>
 
 					{/* Card SAI */}
-					<div className="card">
+					<div className="card shadow-flat">
+
+							<svg width="25" height="160" viewBox="0 0 25 160" className='decor-left' fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.796875 33.7354L20 33.7354L24.4934 9.49335L0.796874 0.5L0.796875 33.7354Z" fill="#FFE16D"/>
+								<path d="M0.796815 160L24.7968 140.997L24.7968 74.4875L0.796383 74.4875L0.796815 160Z" fill="#72AAFF"/>
+								<path d="M1 67.782L24.6965 67.782L19.5 39.9999L0.999999 39.9999L1 67.782Z" fill="#94DC64"/>
+							</svg>
+
 						 <div className="card-img">
 								<img src="/image/ic_sai.png" alt="" />
 						 </div>
@@ -37,7 +50,14 @@ export default function ToolsSection({}: toolsProps) {
 					</div>
 
 					{/* Card Blender */}
-					<div className="card yellow">
+					<div className="card yellow shadow-flat">
+
+						<svg width="25" height="160" viewBox="0 0 25 160" className='decor-left' fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.796875 33.7354L20 33.7354L24.4934 9.49335L0.796874 0.5L0.796875 33.7354Z" fill="#FFE16D"/>
+								<path d="M0.796815 160L24.7968 140.997L24.7968 74.4875L0.796383 74.4875L0.796815 160Z" fill="#72AAFF"/>
+								<path d="M1 67.782L24.6965 67.782L19.5 39.9999L0.999999 39.9999L1 67.782Z" fill="#94DC64"/>
+							</svg>
+
 						 <div className="card-img">
 										<img src="/image/ic_blend.png" alt="" />
 						 </div>
