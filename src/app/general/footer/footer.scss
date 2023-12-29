@@ -88,6 +88,10 @@
 							transition: all 150ms ease;
 						}
 						&:hover{
+							color: var(--yellow);
+							&::before{
+								background: var(--yellow);
+							}
 							&::before{
 								width: 100%;
 							}

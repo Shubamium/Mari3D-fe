@@ -48,6 +48,11 @@ Check out my work, and maybe i'll see your application soon? `}
 					<img className='card-front' src="/image/hero.png" alt="" />
 					<video className='card-back' src="/video/hero.mp4" autoPlay loop muted/>
 				</div>
+				<div className="arrows">
+					<div className="arrow"></div>
+					<div className="arrow"></div>
+					<div className="arrow"></div>
+				</div>
 			</figure>
 		</section>
 	)

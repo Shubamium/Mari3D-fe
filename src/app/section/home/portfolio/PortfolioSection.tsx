@@ -9,7 +9,7 @@ type PortfolioProps = {
 
 export default function PortfolioSection({}: PortfolioProps) {
 	return (
-		<section id="container_portfolio">
+		<section id="container_portfolio" className='shadow'>
 			<div className="content">
 				<figure>
 					<img src="/image/banner.png" alt="" />

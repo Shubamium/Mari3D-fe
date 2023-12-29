@@ -1,5 +1,32 @@
 #container_portfolio{
 	background:var(--grad1);
+
+	&:hover{
+		// border-block: 10px solid white;
+	}
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		background-color: var(--green);
+		z-index: -10;
+		width:40%;
+		height: 100%;
+		right: 0%;
+		bottom: 10%;
+		clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+	}
+	&::after{
+		content: '';
+		position: absolute;
+		background-color: var(--green);
+		z-index: -10;
+		width:40%;
+		height: 100%;
+		left: 0%;
+		top: 10%;
+		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	}
 	.content{
 		max-width: 1500px;
 		margin: 0 auto;
