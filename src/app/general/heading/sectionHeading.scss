@@ -1,6 +1,5 @@
 .section_heading{
 
-	filter: drop-shadow(2px 2px 0px rgba(30, 23, 74, 0.378));
 	width: 100%;
 
 	&:hover{
@@ -15,6 +14,8 @@
 		justify-content: center;
 		gap: 1em;
 		margin:  1em auto;
+	filter: drop-shadow(2px 2px 0px rgba(30, 23, 74, 0.378));
+
 	}
 	.decor{
 		height: 30px;

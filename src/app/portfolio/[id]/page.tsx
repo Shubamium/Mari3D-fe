@@ -51,7 +51,6 @@ export default async function PortfolioPreview({
 		return
 	}
 	const modelData = data[0]
-	console.log(modelData.socials)
 	return (
 		<main id='container_portfolio_preview'>
 
