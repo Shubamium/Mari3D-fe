@@ -7,7 +7,7 @@ import {BiSolidHappyBeaming} from 'react-icons/bi'
 export default function PackageList({}: Props) {
 
 	const packageOne : packageProps = {
-		icon:'/image/pack_vr.png',
+		icon:'/image/pack_vr.webp',
 		package_name:'VRChat Avatar', 
 		no: '001',
 		description: <p>An avatar prepared for <b>VRChat</b> using <b>VRC SDK</b></p>,
@@ -28,7 +28,7 @@ export default function PackageList({}: Props) {
 	}
 	
 	const packageTwo : packageProps = {
-		icon:'/image/pack_vt.png',
+		icon:'/image/pack_vt.webp',
 		package_name:'VTubing Avatar', 
 		no: '002',
 		description: <p>An avatar made ready for streaming and/or other program like; <b>VNyan</b>, <b>VseeFace</b>, <b>Warudo</b> and so on.</p>,
@@ -53,8 +53,8 @@ export default function PackageList({}: Props) {
 	}
 	return (
 		<section id='container_package-list'>
-				<img src="/decor/tech_top.png" alt="" className='decor_tech' />
-				<img src="/decor/tech_top.png" alt="" className='decor_tech bottom' />
+				<img src="/decor/tech_top.webp" alt="" className='decor_tech' />
+				<img src="/decor/tech_top.webp" alt="" className='decor_tech bottom' />
 				<div className="confine">
 					<PackageDisplayer {...packageOne}/>
 					<PackageDisplayer {...packageTwo}/>

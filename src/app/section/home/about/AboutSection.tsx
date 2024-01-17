@@ -25,7 +25,7 @@ export default function AboutSection({}: aboutSectionProps) {
 					</div>
 			</article>
 			<figure>
-				<img src="decor/about_back.png" alt="" className='decor_back'/>
+				<img src="decor/about_back.webp" alt="" className='decor_back'/>
 			</figure>
 		</section>
 	)

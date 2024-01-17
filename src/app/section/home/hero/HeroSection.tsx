@@ -26,7 +26,7 @@ export default function HeroSection({}: Props) {
 							</div>
 
 							<div className="title-right">
-								<img src="/image/icon.png" alt="" />
+								<img src="/image/icon.webp" alt="" />
 							</div>
 						</div>
 						<p className='main-text'>
@@ -39,13 +39,13 @@ Check out my work, and maybe i'll see your application soon? `}
 									<path d="M127 13H60L48 1H2L28 27H10L28 45V84" stroke="black"/>
 									<path d="M263 37L273 46.3548V85.6452L263 95H238L228 85.6452H184" stroke="black"/>
 							</svg>
-							<img src="/decor/arrow_theme.png" alt="" />
+							<img src="/decor/arrow_theme.webp" alt="" />
 						</div>
 					</div>
 			</article>
 			<figure>
 				<div className="card">
-					<img className='card-front' src="/image/hero.png" alt="" />
+					<img className='card-front' src="/image/hero.webp" alt="" />
 					<video className='card-back' src="/video/hero.mp4" autoPlay loop muted/>
 				</div>
 				<div className="arrows">

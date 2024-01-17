@@ -13,7 +13,7 @@ export default function FaqHeading({}: Props) {
 				</article>
 
 				<figure>
-					<img src="/image/banner.png" alt="" />
+					<img src="/image/banner-min.png" alt="" />
 				</figure>
 			</div>
 		</div>

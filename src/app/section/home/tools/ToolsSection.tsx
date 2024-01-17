@@ -21,7 +21,7 @@ export default function ToolsSection({}: toolsProps) {
 						</svg>
 
 						 <div className="card-img">
-										<img src="/image/ic_photo.png" alt="" />
+										<img src="/image/ic_photo.webp" alt="" />
 						 </div>
 
 						 <div className="card-text">
@@ -40,7 +40,7 @@ export default function ToolsSection({}: toolsProps) {
 							</svg>
 
 						 <div className="card-img">
-								<img src="/image/ic_sai.png" alt="" />
+								<img src="/image/ic_sai.webp" alt="" />
 						 </div>
 
 						 <div className="card-text">
@@ -59,7 +59,7 @@ export default function ToolsSection({}: toolsProps) {
 							</svg>
 
 						 <div className="card-img">
-										<img src="/image/ic_blend.png" alt="" />
+										<img src="/image/ic_blend.webp" alt="" />
 						 </div>
 
 						 <div className="card-text">

@@ -7,7 +7,7 @@ export default function PackageHeading({}: Props) {
 	return (
 		<div id='container_package-head'>
 				<div className="banner">
-					<img src="/image/banner.png" alt="" />
+					<img src="/image/banner-min.png" alt="" />
 				</div>
 				<div className="title">
 					<article>
@@ -15,9 +15,9 @@ export default function PackageHeading({}: Props) {
 						<p>I offer a standard 3D Model Package to every client for who’m the  <b>quality is the priority</b>, Here You’ll find some information on what this package includes</p>
 					</article>
 					<figure>
-						<img src="/image/placeholder_port-preview.png" alt="" />
-						<img src="/image/placeholder_port-preview.png" alt="" />
-						<img src="/image/placeholder_port-preview.png" alt="" />
+						<img src="/image/placeholder_port-preview.webp" alt="" />
+						<img src="/image/placeholder_port-preview.webp" alt="" />
+						<img src="/image/placeholder_port-preview.webp" alt="" />
 					</figure>
 				</div>
 		</div>

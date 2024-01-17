@@ -10,12 +10,12 @@ export default function Home() {
 			<HeroSection/>
 			<div className="hero_frame">
 				<div className="top">
-					<img src="/decor/side_l.png" alt="" className="side l" />
-					<img src="/decor/side_r.png" alt="" className="side r" />
+					<img src="/decor/side_l.webp" alt="" className="side l" />
+					<img src="/decor/side_r.webp" alt="" className="side r" />
 				</div>
 				<div className="bottom">
-					<img src="/decor/side_l.png" alt="" className="side l" />
-					<img src="/decor/side_r.png" alt="" className="side r" />
+					<img src="/decor/side_l.webp" alt="" className="side l" />
+					<img src="/decor/side_r.webp" alt="" className="side r" />
 				</div>
 			</div>
 			<AboutSection/>

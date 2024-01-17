@@ -67,7 +67,7 @@ export default async function PortfolioPreview({
 
 								<div className="bottom">
 									{/* 02 Decor thingy */}
-									<img src="/decor/port_number.png" alt="" height={90} className='decor_number' />
+									<img src="/decor/port_number.webp" alt="" height={90} className='decor_number' />
 								</div>
 							</div>
 							<figure className='main-img'>

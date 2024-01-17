@@ -11,7 +11,7 @@ export default function ContactSection({}: Props) {
 			<div className="credentials">
 				<div className="confine">
 					<figure>
-						<img src="/image/contact_icon.png" alt="" />
+						<img src="/image/contact_icon.webp" alt="" />
 					</figure>
 					<article>
 						<h1>MARI3D</h1>

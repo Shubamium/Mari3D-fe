@@ -34,7 +34,7 @@ function PortfolioDisplayer({name,image,slug}:portfolioDisplayerProps){
 	}
 	return (
 		<div className='portfolio-item ' onClick={changeRoute}>
-			<img src={image ?? "/image/placeholder_portfolio.png"} alt="" className='main-img' />
+			<img src={image ?? "/image/placeholder_portfolio.webp"} alt="" className='main-img' />
 			<div className="top"></div>
 			<div className="detail">
 				<div className="title">
