@@ -7,6 +7,8 @@
 		background-size: 250px;
 		background-blend-mode: multiply;
 		overflow: hidden;
+		border-top: 4px solid var(--green);
+		border-bottom: 4px solid var(--green);
 
 		.confine{
 			max-width: 1200px;
@@ -60,7 +62,8 @@
 		background-size: contain;
 		background-blend-mode: multiply;
 		background-attachment: fixed;
-
+		border-bottom: 4px solid var(--green);
+		border-top: 4px solid var(--green);
 		.main-title{
 			text-align: center;
 			h2{
@@ -75,6 +78,8 @@
 			p{
 				background: white;
 				font-size: 4rem;
+				outline: 2px solid var(--dGreen);
+				outline-offset: 5px;
 				color: var(--bGreen);
 				padding: 0 2em;
 				margin: .4em 0;

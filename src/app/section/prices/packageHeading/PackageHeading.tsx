@@ -1,5 +1,6 @@
 import React from 'react'
 import './packageHeading.scss'
+import { FaPlay } from 'react-icons/fa'
 type Props = {}
 
 export default function PackageHeading({}: Props) {
@@ -10,7 +11,7 @@ export default function PackageHeading({}: Props) {
 				</div>
 				<div className="title">
 					<article>
-						<h2>Packages</h2>
+						<h2>Packages <FaPlay /> <FaPlay/> <FaPlay/></h2>
 						<p>I offer a standard 3D Model Package to every client for who’m the  <b>quality is the priority</b>, Here You’ll find some information on what this package includes</p>
 					</article>
 					<figure>

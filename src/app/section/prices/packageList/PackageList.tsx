@@ -53,6 +53,8 @@ export default function PackageList({}: Props) {
 	}
 	return (
 		<section id='container_package-list'>
+				<img src="/decor/tech_top.png" alt="" className='decor_tech' />
+				<img src="/decor/tech_top.png" alt="" className='decor_tech bottom' />
 				<div className="confine">
 					<PackageDisplayer {...packageOne}/>
 					<PackageDisplayer {...packageTwo}/>
@@ -92,7 +94,7 @@ function PackageDisplayer(pack:packageProps){
 					<div className="arrow g"></div>
 				</div>
 			</div>
-			<div className="package-description">
+			<div className="package-description shine">
 				{pack.description}
 			</div>
 			<div className="package-include">
