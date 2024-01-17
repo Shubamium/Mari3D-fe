@@ -88,13 +88,15 @@
 					// border-radius: 4em;
 					// border: 2px solid var(--green);
 					animation: graph 100s ease-in-out infinite;
-					scale: 1.8;
+					scale: 2;
+					filter: brightness(0%);
 					position: absolute;
 					bottom: -10%;
 					left: 20%;
 					z-index: -20;
 					// transition: all 150ms ease;
-					opacity: .5;
+					opacity: .05;
+					// scale: ;
 				}
 				&:hover{
 					&::before{
